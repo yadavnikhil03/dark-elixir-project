@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-outfit);
+
+  --color-background: #050505;
+  --color-foreground: #fafafa;
+
+  --color-card: #0a0a0a;
+  --color-card-foreground: #fafafa;
+
+  --color-popover: #0a0a0a;
+  --color-popover-foreground: #fafafa;
+
+  --color-primary: #fafafa;
+  --color-primary-foreground: #050505;
+
+  --color-secondary: #171717;
+  --color-secondary-foreground: #fafafa;
+
+  --color-muted: #171717;
+  --color-muted-foreground: #a3a3a3;
+
+  --color-accent: #1f1f1f;
+  --color-accent-foreground: #fafafa;
+
+  --color-destructive: #7f1d1d;
+  --color-destructive-foreground: #fafafa;
+
+  --color-border: #1f1f1f;
+  --color-input: #1f1f1f;
+  --color-ring: #fafafa;
+
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.25rem;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border, currentColor);
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
